@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quoting Dojo</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <h2  class='text-center text-primary'>Quote Dojo</h2>
+        <h3 class='text-center text-warning'>Here are some quotes!</h3>
+        <div>
+          <% for (var key in quotes) {%>
+            <h3 class="text-primary"><%=quotes[key].quote%></h3>
+              <form action="/like" method="post">
+                <input type="hidden" name="quote" value="<%=quotes[key].quote%>">
+                <button type="submit"class="btn btn-info">Like</button>
+              </form>
+            <p class="text-right"><%=quotes[key].likes%> Likes <br><%=quotes[key].name%> at
+            <%=quotes[key].created%></p>
+            <hr>
+          <%}%>
+        </div>
+    </div>
+
+    </div>
+  </body>
+</html>

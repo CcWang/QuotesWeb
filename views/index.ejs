@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quoting Dojo</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <h2  class='text-center text-primary'>Quote Dojo</h2>
+        <h3 class='text-center text-warning'><%= message%></h3>
+        <div>
+          <form  role="form" action="/quote" method="post">
+            <div class="form-group">
+              <label for="name">Your Name:</label>
+              <input type="text" name='name' class="form-control" id="name">
+            </div>
+            <div class="form-group">
+              <label for="quote">Your Quote:</label>
+              <textarea class="form-control" id="quote" name="quote"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Add my quote!
+          </form>
+          <a href="/quotes"><button class="btn btn-warning">Skip to quotes!</button></a>
+        </div>
+    </div>
+
+    </div>
+  </body>
+</html>
